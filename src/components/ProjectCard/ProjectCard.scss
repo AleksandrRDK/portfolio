@@ -1,0 +1,92 @@
+.project{
+    margin-top: 30px;
+    &__header{
+        text-align: center;
+    }
+    &-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+        gap: 20px;
+        padding: 20px;
+    }
+    &-card {
+        position: relative;
+        width: 100%;
+        height: 400px;
+        perspective: 1000px;
+        border-radius: 10px;
+    }
+}
+
+.project-card__front,
+.project-card__back {
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    transition: transform 0.6s ease;
+}
+
+.project-card__back {
+    background-color: #1e1e1e;
+}
+
+.project-card__front h3 {
+    position: relative;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.project-card__front {
+    transform: rotateY(0deg);
+    background-color: rgba(30, 30, 30, 0.8);
+}
+
+.project-card__back {
+    transform: rotateY(180deg);
+    text-align: left;
+}
+
+.project-card.flipped .project-card__front {
+    transform: rotateY(180deg);
+}
+
+.project-card.flipped .project-card__back {
+    transform: rotateY(0deg);
+}
+
+.info-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: #333;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.info-icon:hover {
+    background-color: #555;
+}
