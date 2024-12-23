@@ -1,0 +1,33 @@
+@media (max-width: 1024px) {
+    .container {
+        max-width: 1000px;
+    }
+    .header {
+        justify-content: center;
+    }
+    .about-me__container {
+        margin-top: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container{
+        max-width: 740px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container{
+        max-width: 300px;
+    }
+    .header{
+        display: none;
+    }
+    .about-me__container {
+        flex-direction: column;
+    }
+    .project-list {
+        padding: 0;
+        grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+    }
+}

@@ -6,6 +6,7 @@ import ApiSkills from '../ApiSkills/ApiSkills';
 import ContactMe from '../ContactMe/ContactMe';
 
 import './App.scss';
+import '../../styles/responsive.scss'
 
 function App() {
   return (

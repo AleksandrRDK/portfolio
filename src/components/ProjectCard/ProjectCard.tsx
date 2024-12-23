@@ -14,20 +14,28 @@ const ProjectCard: React.FC = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: "Project 1",
-      description: "Краткое описание проекта 1.",
-      githubLink: "https://github.com/username/project1",
-      liveLink: "https://username.github.io/project1",
-      image: "/img/card-avatar.jpg"
+      title: "Small Business Dashboard",
+      description: "Small Business Dashboard — это веб-приложение для управления данными малого бизнеса, которое предоставляет пользователям подробную аналитику и статистику по заказам и клиентам. С помощью этого проекта можно отслеживать количество заказов, анализировать повторные покупки, а также получать распределение клиентов и другие ключевые метрики.",
+      githubLink: "https://github.com/AleksandrRDK/small_business_dashboard",
+      liveLink: "https://aleksandrrdk.github.io/small_business_dashboard/",
+      image: `${process.env.PUBLIC_URL}/img/project-card/card-avatar.jpg`
     },
     {
       id: 2,
-      title: "Project 2",
-      description: "Краткое описание проекта 2.",
-      githubLink: "https://github.com/username/project2",
-      liveLink: "https://username.github.io/project2",
-      image: "/img/card-avatar.jpg"
-    }
+      title: "To-Do List",
+      description: "Это приложение для управления задачами, созданное с использованием React и Redux. Позволяет добавлять, редактировать, фильтровать и удалять задачи.",
+      githubLink: "https://github.com/AleksandrRDK/to-do_list",
+      liveLink: "https://aleksandrrdk.github.io/to-do_list/",
+      image: `${process.env.PUBLIC_URL}/img/project-card/card-avatar2.jpg`
+    },
+    {
+      id: 3,
+      title: "Markdown Notes",
+      description: "Markdown Notes — это веб-приложение для создания и управления заметками с поддержкой синтаксиса Markdown. Приложение позволяет пользователям записывать заметки, просматривать их в режиме предварительного просмотра, а также копировать форматированный текст в HTML для использования в других приложениях.",
+      githubLink: "https://github.com/AleksandrRDK/markdown-notes",
+      liveLink: "https://aleksandrrdk.github.io/markdown-notes/",
+      image: `${process.env.PUBLIC_URL}/img/project-card/card-avatar3.jpg`
+    },
   ];
 
   const [flippedProject, setFlippedProject] = useState<number | null>(null);
