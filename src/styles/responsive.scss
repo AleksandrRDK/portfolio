@@ -20,14 +20,25 @@
     .container{
         max-width: 300px;
     }
-    .header{
-        display: none;
-    }
     .about-me__container {
         flex-direction: column;
+        margin-top: 10px;
+        gap: 0;
     }
-    .project-list {
-        padding: 0;
-        grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+    .about-me__description{
+        margin-bottom: 0;
+    }
+    .project{
+        h3{
+            text-align: center;
+        }
+        &__header{
+            margin-bottom: 10px;
+        }
+        &-list {
+            padding: 0;
+            grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+            grid-auto-rows: minmax(560px, auto);
+        }
     }
 }

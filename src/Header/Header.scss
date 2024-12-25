@@ -3,35 +3,110 @@
   justify-content: end;
 
   &__wrapper {
+    position: fixed;
+    top: 0;
+    background-color: #1e1e1e;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    border-radius: 20px;
+}
+
+&__nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+&__link {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: color 0.3s, text-shadow 0.3s;
+
+    &:hover {
+      color: #ffffff;
+      text-shadow: 0 0 12px rgba(255, 255, 255, 1),
+                   0 0 20px rgba(255, 255, 255, 0.9),
+                   0 0 30px rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+    }
+}
+
+  &__desktop {
+    display: flex;
+  }
+
+  &__mobile {
+    display: none;
+    position: relative;
+
+    &-menu {
+      padding: 10px 0;
+      display: none;
+      flex-direction: column;
       position: fixed;
       top: 0;
+      right: 0;
+      width: 100%;
       background-color: #1e1e1e;
-      padding: 10px 20px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
       z-index: 1000;
-      border-radius: 20px;
-  }
+      transform: translateY(-100%);
+      transition: transform 0.3s ease-in-out;
 
-  &__nav {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-  }
-
-  &__link {
-      color: #fff;
-      font-size: 16px;
-      text-decoration: none;
-      padding: 5px 10px;
-      border-radius: 4px;
-      transition: color 0.3s, text-shadow 0.3s;
-
-      &:hover {
-        color: #ffffff;
-        text-shadow: 0 0 12px rgba(255, 255, 255, 1),
-                     0 0 20px rgba(255, 255, 255, 0.9),
-                     0 0 30px rgba(255, 255, 255, 0.8);
-        text-decoration: none;
+      &.open {
+        display: flex;
+        transform: translateY(0);
       }
+    }
+
+    .header__link {
+      margin: 10px 0;
+      font-size: 18px;
+      text-align: center;
+      color: #fff;
+    }
+  }
+
+  &__burger {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 1100;
+
+    &-line {
+      width: 30px;
+      height: 3px;
+      background-color: #fff;
+      border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+
+      &.open:nth-child(1) {
+        transform: rotate(45deg) translate(7px, 5px);
+      }
+      &.open:nth-child(2) {
+        opacity: 0;
+      }
+      &.open:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header__desktop {
+    display: none;
+  }
+
+  .header__mobile {
+    display: flex;
   }
 }
