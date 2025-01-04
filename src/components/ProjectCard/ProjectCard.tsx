@@ -14,6 +14,14 @@ const ProjectCard: React.FC = () => {
   const projects: Project[] = [
     {
       id: 1,
+      title: "PokeShere",
+      description: "Pokeshere — это веб-приложение, посвященное миру покемонов. Оно позволяет искать, фильтровать, изучать эволюции покемонов и сравнивать их. Проект создан с использованием современных технологий и API для демонстрации навыков разработки.",
+      githubLink: "https://github.com/AleksandrRDK/pokeshere?tab=readme-ov-file",
+      liveLink: "https://aleksandrrdk.github.io/pokeshere/",
+      image: `${process.env.PUBLIC_URL}/img/project-card/card-avatar3.jpg`
+    },
+    {
+      id: 2,
       title: "Small Business Dashboard",
       description: "Small Business Dashboard — это веб-приложение для управления данными малого бизнеса, которое предоставляет пользователям подробную аналитику и статистику по заказам и клиентам. С помощью этого проекта можно отслеживать количество заказов, анализировать повторные покупки, а также получать распределение клиентов и другие ключевые метрики.",
       githubLink: "https://github.com/AleksandrRDK/small_business_dashboard",
@@ -21,7 +29,7 @@ const ProjectCard: React.FC = () => {
       image: `${process.env.PUBLIC_URL}/img/project-card/card-avatar.jpg`
     },
     {
-      id: 2,
+      id: 3,
       title: "To-Do List",
       description: "Это приложение для управления задачами, созданное с использованием React и Redux. Позволяет добавлять, редактировать, фильтровать и удалять задачи.",
       githubLink: "https://github.com/AleksandrRDK/to-do_list",
@@ -29,7 +37,7 @@ const ProjectCard: React.FC = () => {
       image: `${process.env.PUBLIC_URL}/img/project-card/card-avatar2.jpg`
     },
     {
-      id: 3,
+      id: 4,
       title: "Markdown Notes",
       description: "Markdown Notes — это веб-приложение для создания и управления заметками с поддержкой синтаксиса Markdown. Приложение позволяет пользователям записывать заметки, просматривать их в режиме предварительного просмотра, а также копировать форматированный текст в HTML для использования в других приложениях.",
       githubLink: "https://github.com/AleksandrRDK/markdown-notes",
