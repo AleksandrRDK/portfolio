@@ -13,6 +13,15 @@ interface Project {
 const ProjectCard: React.FC = () => {
     const projects: Project[] = [
         {
+            id: 0,
+            title: 'Edit Storage',
+            description:
+                'Edit Storage — это веб-приложение для хранения, добавления и фильтрации эдитов. Пользователи могут просматривать эдит дня, фильтровать по тегам, добавлять эдиты с видео, ставить оценки, оставлять комментарии и добавлять понравившиеся в избранное. Приложение включает авторизацию, профили пользователей и гибкую фильтрацию.',
+            githubLink: 'https://github.com/AleksandrRDK/edit-storage',
+            liveLink: 'https://aleksandrrdk.github.io/edit-storage-client/#/',
+            image: `${process.env.PUBLIC_URL}/img/project-card/card-avatar2.jpg`,
+        },
+        {
             id: 1,
             title: 'PokeShere',
             description:
@@ -50,6 +59,15 @@ const ProjectCard: React.FC = () => {
             githubLink: 'https://github.com/AleksandrRDK/markdown-notes',
             liveLink: 'https://aleksandrrdk.github.io/markdown-notes/',
             image: `${process.env.PUBLIC_URL}/img/project-card/card-avatar3.jpg`,
+        },
+        {
+            id: 5,
+            title: 'PlantExplorer',
+            description:
+                'PlantExplorer — это веб-приложение для определения растений по фотографии, поиска по базе и отображения наблюдений на карте. Используются PlantNet API, Perenual API, iNaturalist API и React Leaflet. Приложение поддерживает загрузку фото, фильтрацию, отображение вероятностей, модальные окна и адаптивный интерфейс.',
+            githubLink: 'https://github.com/AleksandrRDK/plant-explorer',
+            liveLink: 'https://aleksandrrdk.github.io/plant-explorer/#/',
+            image: `${process.env.PUBLIC_URL}/img/project-card/card-avatar.jpg`,
         },
     ];
 
@@ -97,14 +115,14 @@ const ProjectCard: React.FC = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                View Code (GitHub)
+                                Посмотреть код (GitHub)
                             </a>
                             <a
                                 href={project.liveLink}
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                Live Demo
+                                Посетить сайт
                             </a>
                             <p>{project.description}</p>
                         </div>
