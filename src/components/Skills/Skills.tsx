@@ -1,4 +1,3 @@
-import React from 'react';
 import './Skills.scss';
 
 interface Skill {
@@ -96,20 +95,34 @@ const skills: Skill[] = [
         name: 'GitHub',
         description: 'Хостинг кода и совместная разработка.',
     },
-    // {
-    //     id: 15,
-    //     iconClass: 'devicon-jest-plain colored',
-    //     name: 'Jest',
-    //     description: 'Тестирование JavaScript и React компонентов.',
-    // },
+    {
+        id: 15,
+        iconClass: 'devicon-jest-plain colored',
+        name: 'Jest',
+        description: 'Тестирование JavaScript и React компонентов.',
+    },
     {
         id: 16,
+        iconClass: 'devicon-jest-plain colored',
+        name: 'React Testing Library',
+        description:
+            'Тестирование React-компонентов с фокусом на пользовательское поведение.',
+    },
+    {
+        id: 17,
+        iconClass: 'devicon-nextjs-plain colored',
+        name: 'Next.js',
+        description:
+            'React-фреймворк для SSR, SSG и создания полноценных веб-приложений.',
+    },
+    {
+        id: 18,
         iconClass: 'devicon-jquery-plain colored',
         name: 'jQuery',
         description: 'Упрощение работы с DOM и событийной моделью.',
     },
     {
-        id: 17,
+        id: 19,
         iconClass: 'rest-api',
         name: 'REST API',
         description:
@@ -117,7 +130,7 @@ const skills: Skill[] = [
     },
 ];
 
-const Skills: React.FC = () => {
+const Skills = () => {
     return (
         <div className="skills">
             <h2 className="skills__header" id="skills">
