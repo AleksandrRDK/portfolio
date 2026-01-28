@@ -18,7 +18,7 @@ const ContactMe = () => {
                     rel="noopener noreferrer"
                 >
                     <img
-                        src={`${process.env.PUBLIC_URL}/img/api/github-logo.png`}
+                        src={`${process.env.PUBLIC_URL}/img/social/github-logo.png`}
                         alt="GitHub"
                         className="contact-me__icon"
                     />

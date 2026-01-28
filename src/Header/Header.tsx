@@ -16,15 +16,15 @@ const Header = () => {
                     <a href="#aboutme" className="header__link">
                         Обо мне
                     </a>
-                    <a href="#projects" className="header__link">
-                        Мои проекты
-                    </a>
                     <a href="#skills" className="header__link">
                         Навыки
                     </a>
-                    <a href="#api" className="header__link">
-                        API
+                    <a href="#projects" className="header__link">
+                        Мои проекты
                     </a>
+                    {/* <a href="#api" className="header__link">
+                        API
+                    </a> */}
                     <a href="#contact" className="header__link">
                         Связаться со мной
                     </a>

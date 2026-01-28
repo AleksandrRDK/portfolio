@@ -6,7 +6,7 @@ interface Project {
     title: string;
     description: string;
     githubLink: string;
-    liveLink: string;
+    liveLink?: string;
     image: string;
 }
 
@@ -56,7 +56,7 @@ const ProjectCard = () => {
             description:
                 'Это приложение для управления задачами, созданное с использованием React и Redux. Позволяет добавлять, редактировать, фильтровать и удалять задачи.',
             githubLink: 'https://github.com/AleksandrRDK/to-do_list',
-            liveLink: 'https://aleksandrrdk.github.io/to-do_client/',
+            // liveLink: 'https://aleksandrrdk.github.io/to-do_client/',
             image: `${process.env.PUBLIC_URL}/img/project-card/card-avatar2.jpg`,
         },
         // {
@@ -125,13 +125,16 @@ const ProjectCard = () => {
                             >
                                 Посмотреть код (GitHub)
                             </a>
-                            <a
-                                href={project.liveLink}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Посетить сайт
-                            </a>
+                            {project.liveLink && (
+                                <a
+                                    href={project.liveLink}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Посетить сайт
+                                </a>
+                            )}
+
                             <p>{project.description}</p>
                         </div>
                     </div>
